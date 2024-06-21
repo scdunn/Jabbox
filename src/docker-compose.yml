@@ -1,0 +1,36 @@
+version: '3.4'
+
+services:
+  jabbox.api:
+    image: ${DOCKER_REGISTRY-}jabboxapi
+    depends_on:
+      - "mssql"
+    build:
+      context: .
+      dockerfile: Jabbox.API/Dockerfile
+    ports:
+        - 5300:80
+        - 5301:443
+    environment:
+        - APPSETTINGS__SITENAME=PROD JABBOX
+        - CONNECTIONSTRINGS__JABBOX=Data Source=host.docker.internal,6300; Initial Catalog=jabbox; User Id=sa; Password=secretPass123!
+        - ASPNETCORE_ENVIRONMENT=Development
+        - ASPNETCORE_URLS=https://+:443;http://+:80
+  jabbox.web:
+    depends_on:
+      - "jabbox.api"
+    build: 
+      context: jabbox.web/.
+      dockerfile: Dockerfile
+    ports: 
+      - "4200:80"
+      - "4201:443"
+    volumes: 
+     - ./certs:/etc/nginx/ssl
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+        - SA_PASSWORD=secretPass123!
+        - ACCEPT_EULA=Y
+    ports:
+        - "6300:1433"

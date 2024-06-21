@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jabbox.API", "Jabbox.API\Jabbox.API.csproj", "{16D70EAA-C344-4D1E-97B1-90D96F682873}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jabbox.Data", "Jabbox.Data\Jabbox.Data.csproj", "{FD2FE64E-CFA1-4697-A221-0A9F36B7746C}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "jabbox.web", "Jabbox.Web\jabbox.web.esproj", "{DC3B3770-7C64-417F-8BEE-E6E4B17AFFB1}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{BFB428AA-F9ED-4BE4-81B9-8CBFBD972E3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16D70EAA-C344-4D1E-97B1-90D96F682873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16D70EAA-C344-4D1E-97B1-90D96F682873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16D70EAA-C344-4D1E-97B1-90D96F682873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16D70EAA-C344-4D1E-97B1-90D96F682873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD2FE64E-CFA1-4697-A221-0A9F36B7746C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD2FE64E-CFA1-4697-A221-0A9F36B7746C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD2FE64E-CFA1-4697-A221-0A9F36B7746C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD2FE64E-CFA1-4697-A221-0A9F36B7746C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC3B3770-7C64-417F-8BEE-E6E4B17AFFB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC3B3770-7C64-417F-8BEE-E6E4B17AFFB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC3B3770-7C64-417F-8BEE-E6E4B17AFFB1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DC3B3770-7C64-417F-8BEE-E6E4B17AFFB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC3B3770-7C64-417F-8BEE-E6E4B17AFFB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC3B3770-7C64-417F-8BEE-E6E4B17AFFB1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BFB428AA-F9ED-4BE4-81B9-8CBFBD972E3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFB428AA-F9ED-4BE4-81B9-8CBFBD972E3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFB428AA-F9ED-4BE4-81B9-8CBFBD972E3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFB428AA-F9ED-4BE4-81B9-8CBFBD972E3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {858A65DD-9E57-41EF-81B0-E77504DB75FB}
+	EndGlobalSection
+EndGlobal

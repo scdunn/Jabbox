@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "DockerfileRunArguments": " --no-cache",
+      "serviceActions": {
+        "jabbox.api": "StartDebugging"
+      }
+    }
+  }
+}

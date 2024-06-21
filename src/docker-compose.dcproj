@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk">
+  <PropertyGroup Label="Globals">
+    <ProjectVersion>2.1</ProjectVersion>
+    <DockerTargetOS>Linux</DockerTargetOS>
+    <DockerPublishLocally>False</DockerPublishLocally>
+    <ProjectGuid>bfb428aa-f9ed-4be4-81b9-8cbfbd972e3f</ProjectGuid>
+	  <DockerComposeUpArguments>-d --build</DockerComposeUpArguments>
+	  <DockerComposeDownArguments>--rmi local</DockerComposeDownArguments>
+	  <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerServiceUrl>https://localhost:4201</DockerServiceUrl>
+    <DockerServiceName>jabbox.web</DockerServiceName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="docker-compose.override.yml">
+      <DependentUpon>docker-compose.yml</DependentUpon>
+    </None>
+    <None Include="docker-compose.yml" />
+    <None Include=".dockerignore" />
+  </ItemGroup>
+</Project>
