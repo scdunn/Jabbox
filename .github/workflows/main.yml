@@ -27,4 +27,6 @@ jobs:
             context: src/Jabbox.Web/
             file: src/Jabbox.Web/Dockerfile
             push: true
+            tags: ${{ steps.meta.outputs.tags }}
+            labels: ${{ steps.meta.outputs.labels }}
             
