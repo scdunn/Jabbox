@@ -24,7 +24,8 @@ jobs:
         - name: Build and push Docker image
           uses: docker/build-push-action@v4
           with:
-            file: src/Jabbox.Web/Dockerfile
+            context: src/Jabbox.Web/
+            file: Dockerfile
             push: true
             tags: jabbox.web:latest
             
