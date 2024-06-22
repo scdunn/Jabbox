@@ -27,5 +27,5 @@ jobs:
             context: src/Jabbox.Web/
             file: src/Jabbox.Web/Dockerfile
             push: true
-            tags: jabbox.web:latest
+            tags: chrisxdunn.azurecr.io/jabbox.web:latest
             
