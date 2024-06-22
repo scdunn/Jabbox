@@ -21,7 +21,7 @@ jobs:
             username: ${{ secrets.REGISTRY_USERNAME }}
             password: ${{ secrets.REGISTRY_PASSWORD }}
             
-        - name: Build and push Docker image
+        - name: Build and push Jabbox.Web
           uses: docker/build-push-action@v4
           with:
             context: src/Jabbox.Web/
@@ -29,3 +29,10 @@ jobs:
             push: true
             tags: chrisxdunn.azurecr.io/jabbox.web:latest
             
+        - name: Build and push Jabbox.API
+          uses: docker/build-push-action@v4
+          with:
+            context: src/Jabbox.API/
+            file: src/Jabbox.API/Dockerfile
+            push: true
+            tags: chrisxdunn.azurecr.io/jabbox.api:latest
