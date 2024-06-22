@@ -4,7 +4,7 @@ WORKDIR /App
 
 # Copy everything
 COPY . ./
-COPY ["../Jabbox.Data/Jabbox.Data.csproj", "../Jabbox.Data/"]
+COPY ["./Jabbox.Data/Jabbox.Data.csproj", "../Jabbox.Data/"]
 # Restore as distinct layers
 RUN dotnet restore
 # Build and publish a release
