@@ -25,7 +25,7 @@ jobs:
           uses: docker/build-push-action@v4
           with:
             context: src/Jabbox.Web/
-            file: Dockerfile
+            file: src/Jabbox.Web/Dockerfile
             push: true
             tags: jabbox.web:latest
             
