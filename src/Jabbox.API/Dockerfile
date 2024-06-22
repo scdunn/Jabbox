@@ -6,9 +6,9 @@ EXPOSE 80
 EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /src
-COPY ["/Jabbox.API/Jabbox.API.csproj", "Jabbox.API/"]
-RUN dotnet restore "Jabbox.API/Jabbox.API.csproj"
+WORKDIR "/src/Jabbox.API"
+COPY ["Jabbox.API.csproj", "Jabbox.API/"]
+RUN dotnet restore "Jabbox.API.csproj"
 COPY . .
 RUN dotnet build "Jabbox.API.csproj" -c Release -o /app/build
 
