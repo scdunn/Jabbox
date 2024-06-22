@@ -25,7 +25,6 @@ jobs:
         - name: Build and push Jabbox.API
           uses: docker/build-push-action@v4
           with:
-            context: src/Jabbox.API/
             file: src/Jabbox.API/Dockerfile
             push: true
             tags: chrisxdunn.azurecr.io/jabbox.api:latest
