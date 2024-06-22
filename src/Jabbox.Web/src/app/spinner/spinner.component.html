@@ -1,0 +1,19 @@
+<div *ngIf="(loader.isLoading$ | async)" class="spinner-overlay">
+  <div class="d-flex justify-content-center align-self-center" style="height:100%">
+    <div class="container">
+      <div class="row">
+        <div id="loader">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="loading"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -396,3 +396,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/src/Jabbox.Web/.angular/cache/18.0.3
+/src/Jabbox.Web/dist/web

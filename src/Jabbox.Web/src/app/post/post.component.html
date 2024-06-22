@@ -1,0 +1,48 @@
+<div *ngIf="isCurrentAccount">
+  <button type="button"
+          class="btn btn-primary"
+          (click)="openPopup()">
+    Add Post
+  </button>
+</div>
+<div class="modal"
+     tabindex="-1"
+     role="dialog"
+     [ngStyle]="{'display':displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Post</h4>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="showError" class="alert alert-danger" role="alert">
+          {{errorMessage}}
+        </div>
+
+        <form [formGroup]="postForm" autocomplete="off" novalidate>
+          <div class="mb-3 row">
+            <label for="message" class="col-form-label col-sm-2">Message:</label>
+            <div class="col-md-5">
+              <textarea id="message" formControlName="message" class="form-control"></textarea>
+            </div>
+            <div class="col-md-5">
+              <em *ngIf="validateControl('message') && hasError('message', 'required')">message is required</em>
+            </div>
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger"
+                (click)="addPost(postForm.value)">
+          Save
+        </button>
+        <button type="button" class="btn btn-danger"
+                (click)="closePopup()">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
