@@ -10,7 +10,6 @@ WORKDIR /src
 COPY ["Jabbox.API/Jabbox.API.csproj", "Jabbox.API/"]
 RUN dotnet restore "Jabbox.API/Jabbox.API.csproj"
 COPY . .
-WORKDIR "/src/Jabbox.API"
 RUN dotnet build "Jabbox.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
